@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Menu of Restaurant
+  </title>
+</head>
+<body>
+  <main>
+    <section id="top-section">
+      <h2>Welcome</h2>
+
+      <form>
+        <select id="meal" name="meal">
+          <option value="">-Please choose a dish-</option>
+
+          <option value="">---Breakfast---</option>
+          <option value="6.50">Scrambled eggs</option>
+          <option value="7.00">Omlette</option>
+          <option value="">---Soups---</option>
+          <option value="8.00">Chicken soup</option>
+          <option value="7.50">Tomatoes soup</option>
+          <option value="">---Meats---</option>
+          <option value="17.00">Stewed pork chop</option>
+          <option value="19.00">Pigs Rotter</option>
+          <option value="">---Drinks---</option>
+          <option value="4.00">Beer</option>
+          <option value="3.50">Juice</option>
+        </select>
+        <button class="add-btn" type="button">Add</button>
+      </form>
+    </section>
+
+    
+
+    <section id="showcase">
+        <table id="table-list">
+            <tr>
+              <th id="title">Title</th>
+              <th>Price</th>
+              <th>eu</th>
+            </tr>
+          <!--
+            <tr>
+              <td>Pizza</td>
+              <td>35.00</td>
+            </tr>
+            <tr>
+              <td>Pizza</td>
+              <td>35.00</td>
+            </tr>
+          -->
+        </table>
+
+        
+    </section>
+
+    <section id="total-bill">
+      <h3>Total Bill: <span id="display">0.00 eu</span></h3>
+    </section>
+  </main>
+  
+  <script src="app.js"></script>
+</body>
+</html>

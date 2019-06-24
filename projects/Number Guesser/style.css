@@ -1,0 +1,118 @@
+body{
+  margin: 0;
+  font-family: 'Muli', sans-serif;
+	font-size: 2rem;
+	color: #ddd;
+  line-height: 1.6;  
+  height: 100vh;
+  background: url('bg-img.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+select{
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  color: #ddd;
+  font-size: 1.5rem;
+  background: rgba(33, 44, 80, 0.7); 
+  padding-left: 50px ;
+  width: 300px;
+}
+
+p, h1{margin: 0;}
+
+#show-game{display: none;}
+
+input{
+  padding: 10px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+  margin: 0 auto;
+  width: 200px;
+}
+
+#guess-btn{
+  width: 200px;
+  margin: auto;
+  color: #ddd;
+  padding: 20px 40px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0);
+  text-shadow: #333 0 1px 0;
+  font-size: 24px;
+  text-decoration: none;
+  border: 1px solid #fff;
+  cursor: pointer;
+  position: inherit;
+}
+
+#go-btn{
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 1.5rem;
+  color: #ddd;
+  transition: background 500ms ease;
+  padding: 20px 40px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0);
+  box-shadow: #333 0 1px 0;
+  text-shadow: #333 0 1px 0;
+  font-size: 24px;
+  text-decoration: none;
+  vertical-align: middle;
+  border: 1px solid #fff;
+  cursor: pointer;
+  }
+
+#go-btn:hover {
+  background: rgba(9, 255, 0, 0.7);  
+}
+
+.message{
+  height: 50px;
+  padding: 20px;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+/*=========Media==========*/
+@media screen and (max-width: 780px){
+  .text{
+    font-size: 3rem;
+  }
+
+  label, .message{
+    font-size: 1.3rem;
+    margin-bottom: 0;
+  }
+
+  #guess-btn{
+    width: 150px;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 500px){
+  .text{
+    font-size: 2.5rem;
+  }
+  label, .message{
+    font-size: 1.1rem;
+  }
+}

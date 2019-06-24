@@ -1,0 +1,140 @@
+body{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Schoolbell', cursive;
+  font-size: 18px;
+  background-color: rgba(0,0,0, 0.9);
+  color: #eee;
+}
+
+/*=========Section Start============*/
+.start{
+  width: 60%;
+  margin: auto;
+  margin-top: -5vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; 
+}
+
+.btnStart{
+  background-color:  rgb(250, 11, 0);
+  display: inline-block;
+  padding: 10px;
+  font-size: 32px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 5px rgb(200, 11, 0);
+}
+
+.btnStart:active {
+  background-color: rgb(200, 11, 0);
+  box-shadow: 0 3px #333;
+  transform: translateY(4px);
+}
+
+/*===========Container==============*/
+.container{
+  display: none;
+  margin: 0;
+  padding: 10px;
+}
+
+.container-disabled{
+  cursor: not-allowed; 
+}
+
+h2, h3{
+  margin: 10px 0;
+}
+
+.seconds{
+  color: red;
+}
+
+#result{
+  display: none;
+}
+
+/*==========Section Display===============*/
+.display{
+  display: inline-flex;
+}
+
+ #message{
+  margin-left: 10px;
+ 
+}
+
+.sign{
+  font-size: 22px;
+  border: 1px solid #000;
+  margin: 0 5px;
+  width: 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#number-input{
+  width: 55px;
+  height: 35px;
+  padding: 0 5px;
+  overflow: hidden;
+}
+
+.grid-container {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 50px 50px 50px; 
+  grid-gap: 5px; 
+  padding: 10px;
+}
+
+.grid-container > button {
+  background-color: rgba(255, 255, 255, 0);
+  text-align: center;
+  padding: 10px 0;
+  font-size: 22px;
+  cursor: pointer;
+  color: #eee;
+}
+
+#check{
+  font-weight: bold;
+  background:#00e600;
+}
+
+p{
+  margin: 10px 0;
+}
+
+#gameBtn{
+  display: none;
+  margin-top: 10px;
+  font-size: 16px;
+  background-color: #00e600;
+  border: none;
+  border-radius: 5px;
+  color: #eee;
+  padding: 15px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.correct{
+  color: #00e600;
+}
+
+.wrong{
+  color: red;
+}

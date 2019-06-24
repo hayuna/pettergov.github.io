@@ -1,0 +1,130 @@
+
+body{
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  font-size: 16px;
+  background-image: url('bg-3.jpg');
+  background-repeat: no-repeat;
+  background-size: cover; 
+  opacity: 3;
+}
+
+main{
+  height: 100vh;
+  margin: auto;
+}
+
+
+/*========TOP - SECTION============*/
+#top-section{
+  padding: 20px 0 0 0;
+  text-align: center;
+}
+
+h2{
+  margin: 0;
+}
+
+form{
+  margin: 20px 0;
+}
+
+#meal{
+  width: auto;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 5px;
+  outline: none;
+  box-shadow: 0 5px #57110D;
+  margin: 0 10px;
+  text-align: center;
+}
+
+.add-btn{
+  background-color: #A03C0B;
+  display: inline-block;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 5px #57110D;
+}
+
+.add-btn:active {
+  background-color: #A03C0B;
+  box-shadow: 0 3px #333;
+  transform: translateY(4px);
+}
+
+
+/*=======SHOWCASE - SECTION========*/
+
+#showcase{
+ 
+  height: 50%;
+  overflow: auto;
+}
+
+table {
+  border: 1px solid #ddd;
+  
+  border-collapse: collapse;
+  width: 50%;
+  margin: auto;
+}
+
+#title{
+  text-align: left;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+
+td:first-child, th:first-child{
+  width: 80%;
+  text-align: left;
+}
+
+td:last-child::after, th:last-child::after{
+  width: 10px;
+}
+
+tr:nth-child(even) {
+  background-color: #eee;
+}
+
+a{
+  text-decoration: none;
+  color: #666;
+}
+
+a:hover{
+  color: red;
+  font-weight: bold;
+}
+
+/*====TOTAL BILL===*/
+#total-bill{
+  text-align: center;
+}
+
+
+@media only screen and (max-width: 300px) {
+  .meal {
+    width: 70%;
+  }
+}
+
+@media(max-width: 650px) {
+  #table-list {
+    width: 80%;
+  }
+}

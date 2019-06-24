@@ -1,0 +1,240 @@
+body{
+  font-family: 'Lato';
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  color: #333; 
+}
+
+.start{
+  margin: 20px;
+  text-align: justify;
+}
+
+.inputs{
+  display: block;
+  text-align: center;
+  margin: auto;
+}
+
+ p {
+  margin: 5px;
+}
+
+.startInput{
+  display: block;
+  margin: 10px auto;
+  text-transform: uppercase;
+}
+
+#btnStart{
+  background-color:  rgb(250, 11, 0);
+  
+  padding: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  
+  color: #fff;
+  border: none;
+  border-radius: 5%;
+}
+
+.container{
+  display: none;
+}
+
+div.container{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  
+  
+}
+
+.new-game{
+  padding: 20px; 
+}
+
+button {
+  width: 200px;
+  color: #555;
+  background: none;
+  border: none;
+  font-family: Lato;
+  font-size: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 300;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover { font-weight: 600; }
+
+button:focus, input:focus {
+  outline: none;
+}
+
+i {
+  color: #ff3b25;
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 26px;
+  line-height: 1;
+  vertical-align: text-top;
+  transition: margin 0.3s;
+}
+
+.players{
+  text-align: center;
+  width: 100%;
+  margin: auto; 
+ 
+}
+.player-0-panel,
+.player-1-panel {
+ width: 50%;
+ float: left;
+}
+
+.player-total-label {
+   font-size: 25px;
+   margin: 10px;   
+}
+
+.player-total-score{
+  text-align: center;
+   font-size: 60px;
+   color: #ff3b25;
+}
+
+.active .input { 
+  width: 150px;
+  margin: auto;
+  font-weight: bold; 
+  color: #ff3b25;
+  text-align: center; 
+  font-size: 18px;
+  border: 0 solid #555;
+  box-shadow: 5px 5px 5px grey;
+  
+}
+
+.input{
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.dice{
+  clear: both;
+  height: 105px;
+}
+
+.dice-one, .dice-two {
+  display: none;
+  height: 100px;
+  margin: 0 5px;
+}
+
+.show-dice{
+  display: inline-block;
+  height: 100px;
+  margin: 0 5px;
+}
+
+
+
+.player-current-box {
+  background-color: #ff3b25;
+  color: #fff;
+  width: 100px;
+  margin: 20px auto;
+  padding: 12px;
+  text-align: center;
+}
+
+.player-current-label {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-size: 12px;
+  color: #222;
+}
+
+.player-current-score {
+  font-size: 30px;
+}
+
+.winner {
+  color: #00ff37;
+  font-weight: bold;
+}
+
+
+/*============= MEDIA ===============*/
+/*Smartphones - Sm*/
+@media screen and (max-width: 400px) {
+
+  .new-game{
+    padding: 15px; 
+  }
+  .player-total-label {
+    font-size: 20px;
+    margin: 7px;   
+  }
+
+  .player-total-score{
+    font-size: 45px;
+  }
+
+ .player-current-box {
+    margin: 15px auto;
+    padding: 10px;
+  }
+
+  .input{
+    font-size: 14px;
+  }
+
+  .active .input { 
+    font-size: 14px;
+  }
+
+  button{
+    padding: 5px;
+  }
+}
+
+@media screen and (max-height: 480px) {
+  
+  .new-game{
+    padding: 10px;
+  }
+
+  button{
+    font-size: 18px;
+  }
+  
+  .player-total-score{
+    font-size: 30px;
+  }
+
+  .player-total-label {
+    font-size: 18px;
+    margin: 5px;
+}
+
+  .player-current-box{
+    margin: 8px auto;
+    padding: 0;
+  }
+
+  .dice{
+    height: 75px;
+  }
+
+  .dice-one, .dice-two{
+    height: 75px;
+  }
+}

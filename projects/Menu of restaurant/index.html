@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Menu of Restaurant</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+ 
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center p-3 mb-2 bg-primary text-white">Menu of Our Restaurant</h1>
+      <div class="container-fluid">
+        <div class="row shadow p-2 mb-3 bg-white rounded">
+          <div class="col-md text-center">
+            <h3>Menu</h3> 
+            <ul id="menu" class="list-group text-left">
+              <p class="list-group-item">Breakfast</p>
+              <li class="list-group-item" data-cost="5.00">Scrambled eggs / 5,00 eu<i class="btn fas fa-plus"></i></li>
+              <li class="list-group-item" data-cost="7.00">Omlette / 7,00 eu<i class="btn fas fa-plus"></i></li>
+              <p class="list-group-item">Soups</p>
+              <li class="list-group-item" data-cost="5.50">Chicken soup / 5,50 eu<i class="btn fas fa-plus"></i></li>
+              <li class="list-group-item" data-cost="5.00">Tomatoes soup / 5,00 eu<i class="btn fas fa-plus"></i></li>
+              <p class="list-group-item">Meats</p>
+              <li class="list-group-item" data-cost="15.50">Stewed pork chop / 15,50 eu<i class="btn fas fa-plus"></i></li>
+              <li class="list-group-item" data-cost="17,00">Pigs Rotter / 17,00 eu<i class="btn fas fa-plus"></i></li>
+              <p class="list-group-item">Fish</p>
+              <li class="list-group-item" data-cost="22,00">Smoked salmon / 22,00 eu<i class="btn fas fa-plus"></i></li>
+              <li class="list-group-item" data-cost="20,00">Cod fillets / 20,00 eu<i class="btn fas fa-plus"></i></li>
+              <p class="list-group-item">Drinks</p>
+              <li class="list-group-item" data-cost="5.50">Beer / 5,50 eu<i class="btn fas fa-plus"></i></li>
+              <li class="list-group-item" data-cost="4.50">Juice / 4,50 eu<i class="btn fas fa-plus"></i></li>
+            </ul>
+          </div>
+          <div class="col-md text-center">
+            <h3>Order</h3>
+            <ul id="order" class="list-group text-left rounded"></ul>
+          </div>
+        </div>  
+      </div>
+    <div class="display-bill">
+            <h3 class="text-center">Total Bill:__<span id="display">0,00 eu</span></h3>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>

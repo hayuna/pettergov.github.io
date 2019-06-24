@@ -1,0 +1,80 @@
+body{
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+.container{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#calculator{
+  width: 270px;
+  height: 460px;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 25px;
+  border: 1.5px solid #000;
+  background-color: #333333;
+  box-shadow: 7px 7px 5px #000;
+}
+
+#display{
+  margin-top: 25px;
+ 
+  color: #eee;
+  text-align: right;
+  font-size: 48px;
+  background-color: #111;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 15px;
+ 
+}
+
+#keyboard{
+  margin: auto;
+  /*padding: 10px 20px 10px 20px;*/
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  align-content: center;
+  grid-gap: 1px;
+}
+
+#keyboard > button {
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  padding: 20px 0;
+  font-size: 20px;
+  font-weight: 100;
+  font-family: 'Roboto', sans-serif;
+}
+
+.item0{
+  grid-column: 1 / 3; /*ноль начинается с 1 колонны и заканчивается на 3*/
+}
+
+.number, .operator{
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.number, #dot{
+  background-color:#555;
+  color: #ddd;
+}
+
+.operator.top-oper{
+  background-color: #A6A6A6;
+}
+
+.right-oper{
+  background-color: #F89804;
+  color: #ddd;
+}
+

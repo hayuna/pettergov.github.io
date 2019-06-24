@@ -1,0 +1,39 @@
+.list-group{
+  height: 380px;
+  overflow: auto;
+}
+
+#order{
+  background: #eee;
+}
+
+.list-group-item{
+  padding: 5px 12px;
+}
+
+p.list-group-item{
+  font-weight: bold;
+  text-align: center;
+}
+
+.list-group-item:hover{
+  background-color: #eee;
+}
+
+.fa-plus, .fa-plus:before{
+  float: right;
+  color: #00b300;
+  cursor: pointer;
+}
+
+.fa-minus-circle{
+  float: right;
+  color: #ff0000 !important;
+  cursor: pointer;
+}
+
+.display-bill{
+  display: flex;
+}
+
+

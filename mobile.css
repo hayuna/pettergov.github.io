@@ -1,0 +1,178 @@
+/*Widescreens - XL*/
+@media screen and (min-width: 1171px) {
+  .projects{
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/*Desctops & Laptops - Lg*/
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .projects{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/*Tablets & Small Laptops - Md*/
+@media screen and (max-width: 768px) {
+  main{
+    align-items: center;
+    text-align: center; 
+  }
+
+  .lg-heading{
+    font-size: 4rem;
+    line-height: 1;
+    margin: 10px;
+  }
+
+  ul.menu-nav, div.menu-left{
+    float: none;
+    width: 100%;
+    min-height: 0;
+  }
+
+  ul.menu-nav.show, div.menu-left.show{
+    transform: translate3d(0,0,0);
+  }
+  
+  .menu-nav{
+    height: 65vh;
+    transform: translate3d(100%,0,0);
+    font-size: 24px;
+  }
+
+  .menu-left{  
+    height: 35vh;
+    transform: translate3d(-100%,0,0);
+  }
+
+  .foto-sm{
+    width: 150px;
+    height: 150px;
+  }
+
+  .about-info{
+    grid-gap: 15px;
+  }
+
+  img.bio-image{
+    width: 150px;
+    height: 150px;
+  }
+
+  .about-info{
+    grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
+    grid-template-columns: 1fr;
+  }
+
+  .projects{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .boxes{
+    display: block;
+  }
+
+  .boxes div{
+    font-size: 1rem;
+    border: 1px #fff solid;
+    padding: 0.5rem;
+    margin-bottom: 1.5rem;
+  } 
+}
+
+@media screen and (min-width: 379px) and (max-width: 600px) {
+  .projects{
+    grid-template-columns: 1fr;
+    width: 70%;
+    margin: auto;
+  }
+}
+
+/*Smartphones - Sm*/
+@media screen and (max-width: 380px) {
+
+  main{
+    padding: 2rem;
+  }
+ 
+  .lg-heading{
+    font-size: 50px; 
+  }
+
+  .nav-link{
+    padding: 10px;
+  }
+
+  #about h1, #work h1, #contact h1{
+    font-size: 2rem;
+  }
+
+  p{
+    font-size: 18px;
+  }
+
+  .projects{
+    grid-template-columns: 1fr;
+    width: 80%;
+    margin: auto;
+  }
+
+   img.bio-image{
+    width: 100px;
+    height: 100px;
+  }
+
+  #about p{
+    text-align: justify;
+  }
+  
+  .boxes div{
+    font-size: 1.2rem;
+  }
+
+  .pro-img{
+    width: 200px;
+    height: 150px;
+  }
+}
+
+
+@media screen and (max-height: 450px) {
+  main{
+    padding: 2rem;
+  }
+
+  main#home h1 {
+     
+     font-size: 3rem;
+  }
+
+  #about h1, #work h1, #contact h1 {
+    font-size: 2rem;
+  }
+
+  .nav-link{
+    display: inline;
+    font-size: 24px;
+    padding: 15px 0;
+  }
+
+  p{
+    font-size: 18px;
+  }
+
+  img.bio-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .foto-sm {
+    width: 80px;
+    height: 80px;
+  }
+
+
+}
+
+

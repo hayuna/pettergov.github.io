@@ -1,0 +1,161 @@
+body{
+  margin: 0;
+  background-color: #000;
+	color: #fff;
+
+  font-family: 'Source Code Pro', monospace;
+  
+}
+p{padding: 10px;}
+
+.container{
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+
+.img{
+  height: 70px;
+  width: 150px;
+  display: none;
+  border: 3px grey solid;
+}
+
+#display-password{
+  width: 80vw;
+  margin: auto;
+  letter-spacing: 3px;
+  text-align: center;
+  font-size: 26px;
+}
+
+.wrap{
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+}
+
+.message{
+  width: 400px;
+}
+
+
+#life-img{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  
+}
+
+.life-img{
+width: 300px;
+height: 200px ;
+}
+
+.keyboard{  
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 50px 50px 50px 50px 50px 50px 50px;
+  grid-gap: 8px 5px;
+  padding: 10px;
+}
+
+
+.key{
+  font-size: 26px;
+	padding: 5px;
+	border: 3px solid gray;
+	cursor: pointer;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 3px #aaa;
+}
+
+
+.key:hover
+{
+	background-color: #222222;
+	color: white;
+	border: 3px solid white;
+}
+
+.correct{
+background:#003300;
+color: #00C000;
+border: 3px solid #00C000;
+cursor: default;
+box-shadow: 0 1px #333;
+  transform: translateY(4px);
+}
+.correct:hover{
+  background:#003300;
+color: #00C000;
+border: 3px solid #00C000;
+
+}
+
+.wrong{
+background: #330000;
+color: #C00000;
+border: 3px solid #C00000;
+cursor: default;
+box-shadow: 0 1px #333;
+  transform: translateY(4px);
+}
+
+
+.wrong:hover{
+  background: #330000;
+color: #C00000;
+border: 3px solid #C00000;
+
+}
+
+.reset
+{
+	cursor: pointer;
+  font-size: 22px;
+}
+
+.reset:hover
+{
+	color:green;
+}
+
+@media screen and (max-width: 780px) {
+
+  h2{
+    font-size: 20px;
+    margin: 5px;
+  }
+  .life-img{
+    width: 240px;
+    height: 110px ;
+    }
+
+  .wrap{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto;
+  }
+  .message{
+    width: auto;
+  }
+
+  .keyboard{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 35px 35px 35px 35px 35px 35px 35px;
+    grid-gap: 5px;
+    padding: 10px;
+  }
+
+  .key{
+    font-size: 16px;
+    padding: 5px;
+  }
+}
+
+

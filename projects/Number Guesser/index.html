@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Number Guesser</title>
+</head>
+<body>
+  <div class="container">
+    <div class="display" id="game">
+
+      <h1 class="text">Number Guesser</h1>
+      <div id="start">
+        <select id="select-level"  name="level">
+          <option class="choose" name="choose" value="choose">Choose A Level</option>
+          <option class="levels easy" name="levels" value="easy">Easy - 10 attempts</option>
+          <option class="levels medium" name="levels" value="medium">Medium - 7 attempts</option>
+          <option class="levels hard" name="levels" value="hard">Hard - 5 attempts</option>
+          <option class="levels your-choose" name="levels" value="your-choose">Your Choosing</option>
+        </select><br>
+        <button id="go-btn" type="button" value="Play">Play</button>
+      </div>
+
+      <div id="show-game"> 
+          <label>These your attempts<br>
+            <input type="number" id="attempt-input" placeholder="How many attempts..." min="1" autofocus>    
+          </label>
+          <label>Guess a number between
+            <span class="min-num"></span>
+            and
+            <span class="max-num"></span>
+            <input type="number" id="guess-input" placeholder="Enter your guess..." autofocus>
+          </label>
+          <p class="message"></p>
+          <button type="submit" value="Try to guess" id="guess-btn">Guess</button>
+          
+        </div> 
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
