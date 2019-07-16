@@ -134,7 +134,7 @@ window.onload = function() {
 
       let bars = 150; // amount of bars
 
-      if(window.innerWidth <= 320){
+      if(window.innerWidth <= 500){
         radius = 75;
         bars = 200;
         ctx.clearRect(0, 0, canvas.width, canvas.height);
