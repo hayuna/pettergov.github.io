@@ -1,0 +1,38 @@
+
+body{
+  margin: 0;
+  background: #000;
+  color: #fff;
+}
+
+h1{
+  text-align: center;
+}
+
+.buttons{
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.canvas{
+  display: block;
+  margin: 0 auto;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+}
+
+audio {
+  display: block;
+  text-align: center;
+  bottom: 10px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 780px) {
+
+  .radius{
+    font-size: 25px;
+  }
+}
