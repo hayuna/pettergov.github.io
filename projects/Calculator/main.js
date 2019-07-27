@@ -7,52 +7,79 @@ let clear = document.querySelector('#clear');
 let backspace = document.querySelector('#backspace');
 let percent = document.querySelector('#percent');
 
-for (let i = 0; i < number.length; i++) {
-  number[i].addEventListener('click', function(e){ 
-    if(e.target.classList.contains('number')) {
-      
-      if(display.textContent === '0') {
-        display.innerHTML = '';
-      }
-      display.innerHTML += number[i].value;
-    }  
-  })
-};
+let displayResult = [];
 
-for (let i = 0; i < operator.length; i++) {
-  operator[i].addEventListener('click', function(){
-    
-    
-    display.innerHTML += operator[i].value; 
-  })
-};
+// Get numbers
+number.forEach(function(num){
+  num.addEventListener('click', getNumber);
+  function getNumber() {
+    displayResult.push(this.value);
+    display.innerHTML = displayResult.join(''); 
 
-equal.addEventListener('click', function getResult(){
-  let sum = eval(display.innerHTML);
-  display.innerHTML = sum;
-  //console.log(typeof(sum));      
-});
-
-clear.addEventListener('click', function(){
-  display.innerHTML = "0";
-});
-
-backspace.addEventListener('click', function(){
-  let output = display.innerHTML.toString();		
-	output = output.substr(0, output.length-1);
-  display.innerHTML = output;
-  if (output === ''){
-    display.innerHTML ='0';
+    console.log(displayResult);
   }
-  //console.log(typeof(output)); ==> string    
+})
+
+// Get operators
+operator.forEach(function(oper) {
+  oper.addEventListener('click', getOperator);
+  function getOperator() {
+    if(displayResult[displayResult.length-1] == '-'  
+      || displayResult[displayResult.length-1] == '+' 
+      || displayResult[displayResult.length-1] == '/' 
+      || displayResult[displayResult.length-1] == '*') {
+      displayResult.splice(-1, 1, this.value)
+      display.innerHTML = displayResult.join('');
+    } else {
+      displayResult.push(this.value)
+      display.innerHTML = displayResult.join('');
+
+      console.log(displayResult);
+    }   
+  }
+})
+
+// Equal Button
+equal.addEventListener('click', function (){
+  let sum = eval(display.innerHTML);
+  displayResult = [];
+  let res = sum.toString().split('');
+  displayResult = res;
+  display.innerHTML = sum;
+
+  console.log(res);
+  console.log(sum);  
+  console.log(displayResult);
 });
 
+// Backspace Button
+backspace.addEventListener('click', function(){ 
+  displayResult.pop(); 
+  display.innerHTML = displayResult.join('');
+
+  if (displayResult.length == 0){
+    display.innerHTML = 0;
+  }
+  console.log(displayResult);
+});
+
+// AC Button
+clear.addEventListener('click', function(){
+  displayResult = [];
+  display.innerHTML = "0";
+
+  console.log(displayResult);
+});
+
+// Percent Button
 percent.addEventListener('click', function() {
+  displayResult = [];
   let per = display.innerHTML / 100;
-  display.innerHTML = per;   
+  per = per.toString().split('');
+  displayResult = per;
+  display.innerHTML = per.join(''); 
+
+  console.log(per);
+  
+  console.log(displayResult);  
 });
-
-
-
- 
- 
