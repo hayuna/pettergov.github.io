@@ -1,5 +1,4 @@
-// Init Cocktail
-const cocktail = new Cocktail;
+
 // Init UI
 const ui = new UI;
 const error = new Error;
@@ -18,18 +17,20 @@ btnGetIngredient.addEventListener('click', () => {
     
   } else{
     // Make http call
-    cocktail.getCocktailByIngredient(inputText)
-      .then(data => {
-        //console.log(data.profile); 
-        console.log(data);
-        ui.showProfile(data.profile); 
-        searchIngredient.value = '';       
-      })
-      
-      .catch( () => {
-        ui.showAlert(`Not found ${inputText} ingredient's name`)
-        searchIngredient.value = ''
-      })
+    fetch(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${inputText}`)
+    .then(resp => resp.json())
+    .then(resp => {
+        console.log(resp);
+        
+        let drinksArray = Array.from(resp.drinks);
+        console.log(drinksArray);
+        ui.showProfile(drinksArray);
+        searchIngredient.value = '';
+    })
+    .catch( () => {
+      ui.showAlert(`Not found ${inputText} ingredient's name`)
+      searchIngredient.value = ''
+    })
   }
 });
 
@@ -47,14 +48,16 @@ btnGetIngredient.addEventListener('click', () => {
       
     } else{
       // Make http call
-      cocktail.getCocktailByName(inputText)
-      .then(data => {
-        //console.log(data.profile); 
-        console.log(data);
-        ui.showNameProfile(data.profileName); 
-        searchName.value = '';       
-      })
+      fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${inputText}`)
+    .then(resp => resp.json())
+    .then(resp => {
+        console.log(resp);
         
+        let drinksArray = Array.from(resp.drinks);
+        console.log(drinksArray);
+        ui.showNameProfile(drinksArray);
+        searchName.value = '';
+    })        
       .catch( () => {
         ui.showAlert(`Not found ${inputText} cocktail's name`)
         searchName.value = ''
@@ -72,12 +75,15 @@ function showCocktail(e) {
     console.log(cocktailName);
     console.log(e.target.parentElement.childNodes[1].textContent);
    
-    
-   
-    cocktail.getCocktailByName(cocktailName)
-      .then(data => {
-        //console.log(data.profileName);
-        ui.showNameProfile(data.profileName);
-      })
+    fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${cocktailName}`)
+    .then(resp => resp.json())
+    .then(resp => {
+        console.log(resp);
+        
+        let drinksArray = Array.from(resp.drinks);
+        console.log(drinksArray);
+        ui.showNameProfile(drinksArray);
+       
+    })        
   }
 }

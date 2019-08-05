@@ -4,13 +4,14 @@ class UI{
     
   }
   // Display profile in UI
-  showProfile(cocktail) {
-    
+  showProfile(drinksArray) {
+
     const inputText = searchIngredient.value.toUpperCase();
-    let amountCocktails = cocktail.drinks.length; 
+
+    let amountCocktails = drinksArray.length; 
     let output = `<p>We found ${amountCocktails} cocktails with ingredient - <b>${inputText}</b></p>`;
     //console.log(inputText);
-    cocktail.drinks.forEach( drink => { 
+    drinksArray.forEach(drink => { 
 
       output += `
       <div class="card col-md-3 col-sm-3 col-xs-2 text-white bg-dark mb-3" style="display: inline-block; width: 120px;">
@@ -30,12 +31,13 @@ class UI{
   }
   
 // Display cocktail with ingredients
-  showNameProfile(cocktail) {
+  showNameProfile(drinksArray) {
+    
     const inputText = searchName.value.toUpperCase();
-    let amountCocktails = cocktail.drinks.length; 
+    let amountCocktails = drinksArray.length; 
     let outputFull = `<p>We found ${amountCocktails} cocktails with name <b>${inputText}</b></p>`;
   
-    cocktail.drinks.forEach( drink => {
+    drinksArray.forEach( drink => {
   
       outputFull += `
         <div class="card card-body mb-3 text-white bg-dark cocktailName"><h4 class="card-header cocktailName text-center">${drink.strDrink}</h4>
@@ -126,7 +128,7 @@ class UI{
       figure.forEach( ingredientItem => {
         
         console.log(typeof ingredientItem.childNodes[3].textContent);
-        console.log(ingredientItem.childNodes[3]); 
+        console.log(ingredientItem.childNodes[3].textContent); 
 
         if(ingredientItem.childNodes[3].textContent == ' ' || ingredientItem.childNodes[3].textContent == '  ' || ingredientItem.childNodes[3].textContent == 'null' || ingredientItem.childNodes[3].textContent == 'null null' || ingredientItem.childNodes[3].textContent == '↵' || ingredientItem.childNodes[3].textContent == ' ↵' || ingredientItem.childNodes[3].textContent == '↵ ' || ingredientItem.childNodes[3].textContent == '↵                      ') {
           ingredientItem.style.display = 'none';
