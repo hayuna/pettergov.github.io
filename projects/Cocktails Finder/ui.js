@@ -30,7 +30,7 @@ class UI{
     })
   }
   
-// Display cocktail with ingredients
+// Display cocktail with Name
   showNameProfile(drinksArray) {
     
     const inputText = searchName.value.toUpperCase();
@@ -127,8 +127,8 @@ class UI{
     let figure = document.querySelectorAll('figure');
       figure.forEach( ingredientItem => {
         
-        console.log(typeof ingredientItem.childNodes[3].textContent);
-        console.log(ingredientItem.childNodes[3].textContent); 
+        //console.log(typeof ingredientItem.childNodes[3].textContent);
+        //console.log(ingredientItem.childNodes[3].textContent); 
 
         if(ingredientItem.childNodes[3].textContent == ' ' || ingredientItem.childNodes[3].textContent == '  ' || ingredientItem.childNodes[3].textContent == 'null' || ingredientItem.childNodes[3].textContent == 'null null' || ingredientItem.childNodes[3].textContent == '↵' || ingredientItem.childNodes[3].textContent == ' ↵' || ingredientItem.childNodes[3].textContent == '↵ ' || ingredientItem.childNodes[3].textContent == '↵                      ') {
           ingredientItem.style.display = 'none';
