@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+  
+  <title>Coctails Finder</title>
+</head>
+<body>
+  <div>
+    <nav>
+      <h4>Search Cocktails</h4>
+   
+      <form class="search">
+        <div class="searchDiv">
+          <input type="text" class="input-field" id="searchIngredient" placeholder="Search by ingredients...">
+          <button class="btn search-btn btnGetIngredient">
+            <i class="fas fa-search"></i>
+            <span>Search</span>
+          </button>
+        </div>
+
+        <div class="searchDiv">
+          <input type="text" class="input-field" id="searchName" placeholder="Search by name...">
+          <button class="btn search-btn btnGetName">
+            <i class="fas fa-search"></i>
+            <span>Search</span>
+          </button>
+        </div>
+      </form>
+    </nav>
+  
+    <section class="display text-center"> 
+      <div class="result-list"></div>
+      <div class="pages"></div>
+
+      <div class="card-display">
+        
+      </div>
+      <button class="btnGoTop">
+        <i class="fas fa-arrow-up"></i>
+      </button>
+     
+    </section>
+
+    <footer class="text-center">
+      <div class="">Cocktails Finder &copy; by Pettergov</div>
+    </footer>
+  </div>
+<script type="text/javascript" src="bundle.js"></script></body>
+</html>
